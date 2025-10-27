@@ -33,18 +33,85 @@
 
 // ------------- CODE -------------
 #include <iostream>
-#include <iomanip>
 #include <string>
+#include <limits> // NOT <climits> for cin.ignore(numeric_limits<streamsize>::max(), '\n');
+#include <iomanip>
+
+
+// RUN AND TEST COMMAND
+// cd _midterm // Or the directory containing these files
+// g++ main.cpp && for t in *.txt; do ./a.out < $t; done; rm ./a.out 
+
+// MINIMAL COMPILE AND RUN, one line each
+// COMPILE
+// g++ main.cpp
+
+// RUN
+// ./a.out
+
+// REMOVE ./a.out
+// rm ./a.out
+
+
+
 using namespace std;
 
-// Main function
-// https://en.cppreference.com/w/cpp/language/main_function.html
-int main(int argc, char* argv[]) {
+int main() {
+  string p1_name = "";
+  string p2_name = "";
+  string p3_name = "";
 
-   return 0;
+  int p1_count = 0;
+  int p2_count = 0;
+  int p3_count = 0;
+
+  cout << "Welcome to the Rock Collector Championships!" << endl;
+  
+  cout << "Enter player 1 name: ";
+  getline(cin, p1_name);
+  cout << "How many rocks did " << p1_name << " collect? ";
+  cin >> p1_count;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+  cout << "Enter player 2 name: ";
+  getline(cin, p2_name);
+  cout << "How many rocks did " << p2_name << " collect? ";
+  cin >> p2_count;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+  cout << "Enter player 3 name: ";
+  getline(cin, p3_name);
+  cout << "How many rocks did " << p3_name << " collect? ";
+  cin >> p3_count;
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+  // DEBUG
+  // cout << endl;
+  // cout << "NAME" <<  '\t' << "COUNT" << endl;
+  // cout << p1_name << '\t' << p1_count << endl;
+  // cout << p2_name << '\t' << p2_count << endl;
+  // cout << p3_name << '\t' << p3_count << endl;
+
+  //Calculations
+
+  float average = (p1_count + p2_count + p3_count) / 3.0;
+
+  cout << fixed << setprecision(2);
+
+  int a = p1_count;
+  int b = p2_count;
+  int c = p3_count;
+
+  string first_name = "";
+  string second_name = "";
+  string third_name = "";
+
+  // Determine places
+  cout << "Congratulations Rock Collectors!" << endl;
+
+  return 0;
 }
 
-// Function implementations (if any)
 
 
 // ------------- DESIGN -------------
