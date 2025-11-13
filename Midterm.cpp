@@ -38,25 +38,11 @@
 #include <iomanip>
 
 
-// RUN AND TEST COMMAND
-// cd _midterm // Or the directory containing these files
-// g++ main.cpp && for t in *.txt; do ./a.out < $t; done; rm ./a.out 
-
-// MINIMAL COMPILE AND RUN, one line each
-// COMPILE
-// g++ main.cpp
-
-// RUN
-// ./a.out
-
-// REMOVE ./a.out
-// rm ./a.out
-
-
-
 using namespace std;
 
 int main() {
+  const int NUM_PLAYERS = 3;
+  
   string p1_name = "";
   string p2_name = "";
   string p3_name = "";
@@ -64,6 +50,7 @@ int main() {
   int p1_count = 0;
   int p2_count = 0;
   int p3_count = 0;
+  
 
   cout << "Welcome to the Rock Collector Championships!" << endl;
   
@@ -85,16 +72,9 @@ int main() {
   cin >> p3_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-  // DEBUG
-  // cout << endl;
-  // cout << "NAME" <<  '\t' << "COUNT" << endl;
-  // cout << p1_name << '\t' << p1_count << endl;
-  // cout << p2_name << '\t' << p2_count << endl;
-  // cout << p3_name << '\t' << p3_count << endl;
-
   //Calculations
 
-  float average = (p1_count + p2_count + p3_count) / 3.0;
+  float average = (p1_count + p2_count + p3_count) / NUM_PLAYERS;
 
   cout << fixed << setprecision(2);
 
@@ -105,6 +85,10 @@ int main() {
   string first_name = "";
   string second_name = "";
   string third_name = "";
+  
+  
+  
+  
 
   // Determine places
   cout << "Congratulations Rock Collectors!" << endl;
