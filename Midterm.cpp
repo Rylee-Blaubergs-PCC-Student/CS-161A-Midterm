@@ -142,12 +142,15 @@ int main() {
 
   // Determine places
   cout << endl;
-  
-  cout << first_name << " is in First Place!" << endl;
-  cout << second_name << " is in Second Place!" << endl;
-  cout << third_name << " is in Third Place!" << endl;
-  cout << endl;
-  
+  if (ties) {
+      
+      } else {
+            cout << first_name << " is in First Place!" << endl;
+            cout << second_name << " is in Second Place!" << endl;
+            cout << third_name << " is in Third Place!" << endl;
+       }
+      
+  cout << endl;      
   cout << "The average number of rocks collected is: " << average << endl;
   cout << endl;
   
