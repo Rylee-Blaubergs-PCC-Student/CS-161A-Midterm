@@ -50,6 +50,7 @@ int main() {
   int p1_count = 0;
   int p2_count = 0;
   int p3_count = 0;
+  bool ties = false;
   
 
   cout << "Welcome to the Rock Collector Championships!" << endl;
@@ -78,7 +79,7 @@ int main() {
   
   //Calculations
 
-  float average = (p1_count + p2_count + p3_count) / NUM_PLAYERS;
+  float average = (static_cast<double>(p1_count) + p2_count + p3_count) / NUM_PLAYERS;
 
   cout << fixed << setprecision(2);
 
@@ -154,7 +155,6 @@ int main() {
 
   return 0;
 }
-
 
 
 // ------------- DESIGN -------------
