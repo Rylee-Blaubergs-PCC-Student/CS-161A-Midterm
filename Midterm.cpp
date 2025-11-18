@@ -139,23 +139,21 @@ int main() {
     }
    // tied for first    
    if (a == highestNum && b == highestNum) {
-    cout << p1_name << " and " << p2_name << " are tied for first place." << endl;
-    cout << second_name << " is in Second Place!" << endl;
-   } 
-   if (a == highestNum && c == highestNum) {
-    cout << p1_name << " and " << p3_name << " are tied for first place." << endl;
-    cout << second_name << " is in Second Place!" << endl;
-   }
-   if (b == highestNum && c == highestNum) {
-    cout << p2_name << " and " << p3_name << " are tied for first place." << endl;
-    cout << second_name << " is in Second Place!" << endl;
+     cout << p1_name << " and " << p2_name << " are tied for first place." << endl;
+     cout << second_name << " is in Second Place!" << endl;
+   } else if (a == highestNum && c == highestNum) {
+     cout << p1_name << " and " << p3_name << " are tied for first place." << endl;
+     cout << second_name << " is in Second Place!" << endl;
+   } else if (b == highestNum && c == highestNum) {
+     cout << p2_name << " and " << p3_name << " are tied for first place." << endl;
+     cout << second_name << " is in Second Place!" << endl;
     
    } else {
     
-    cout << first_name << " is in First Place!" << endl;
-    cout << second_name << " is in Second Place!" << endl;
-    cout << third_name << " is in Third Place!" << endl;
-   }
+     cout << first_name << " is in First Place!" << endl;
+     cout << second_name << " is in Second Place!" << endl;
+     cout << third_name << " is in Third Place!" << endl;
+    }
       
   cout << endl;      
   cout << "The average number of rocks collected is: " << average << endl;
