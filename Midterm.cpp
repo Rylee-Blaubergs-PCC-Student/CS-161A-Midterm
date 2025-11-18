@@ -81,12 +81,57 @@ int main() {
   int a = p1_count;
   int b = p2_count;
   int c = p3_count;
+  int highestNum = 0;
 
   string first_name = "";
   string second_name = "";
   string third_name = "";
   
-  
+  // find the highest number
+  if (a > highestNum) {
+      highestNum = a;
+      first_name = p1_name;
+      if (b > highestNum) {
+          highestNum = b;
+          first_name = p2_name;
+          if (c > highestNum) {
+              highestNum = c;
+              first_name = p3_name;
+              }
+          }
+      }
+   
+   // find lowest number
+   int lowestNum = highestNum;
+   
+   if (a < lowestNum) {
+   lowestNum = a;
+   third_name = p1_name;
+   }
+   if (b < lowestNum) {
+   lowestNum = b;
+   third_name = p2_name;
+   }
+   if (c < lowestNum) {
+   lowestNum = numThree;
+   third_name = p3_name;
+   }
+   
+   // find second place
+   if (lowestNum < a < highestNum) {
+       second_name = p1_name;
+       }
+   if (lowestNum < b < highestNum) {
+       second_name = p2_name;
+       }
+   if (lowestNum < c < highestNum) {
+       second_name = p3_name;
+       }
+   
+   // check for ties
+   if (a == b && a == c) {
+       
+       }
   
   
 
