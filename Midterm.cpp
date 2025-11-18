@@ -59,19 +59,23 @@ int main() {
   cout << "How many rocks did " << p1_name << " collect? ";
   cin >> p1_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cout << endl;
+  
 
   cout << "Enter player 2 name: ";
   getline(cin, p2_name);
   cout << "How many rocks did " << p2_name << " collect? ";
   cin >> p2_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
+  cout << endl;
+  
   cout << "Enter player 3 name: ";
   getline(cin, p3_name);
   cout << "How many rocks did " << p3_name << " collect? ";
   cin >> p3_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
+  cout << endl;
+  
   //Calculations
 
   float average = (p1_count + p2_count + p3_count) / NUM_PLAYERS;
@@ -113,7 +117,7 @@ int main() {
    third_name = p2_name;
    }
    if (c < lowestNum) {
-   lowestNum = numThree;
+   lowestNum = c;
    third_name = p3_name;
    }
    
@@ -136,6 +140,16 @@ int main() {
   
 
   // Determine places
+  cout << endl;
+  
+  cout << first_name << " is in First Place!" << endl;
+  cout << second_name << " is in Second Place!" << endl;
+  cout << third_name << " is in Third Place!" << endl;
+  cout << endl;
+  
+  cout << "The average number of rocks collected is: " << average << endl;
+  cout << endl;
+  
   cout << "Congratulations Rock Collectors!" << endl;
 
   return 0;
