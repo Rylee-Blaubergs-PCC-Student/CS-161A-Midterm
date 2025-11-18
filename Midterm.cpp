@@ -50,7 +50,6 @@ int main() {
   int p1_count = 0;
   int p2_count = 0;
   int p3_count = 0;
-  bool ties = false;
   
 
   cout << "Welcome to the Rock Collector Championships!" << endl;
@@ -133,22 +132,15 @@ int main() {
        second_name = p3_name;
        }
    
-   // check for ties
+   // Determine places + check for ties
    if (a == b && a == c) {
        
        }
   
-  
-
-  // Determine places
-  cout << endl;
-  if (ties) {
-      
-      } else {
-            cout << first_name << " is in First Place!" << endl;
-            cout << second_name << " is in Second Place!" << endl;
-            cout << third_name << " is in Third Place!" << endl;
-       }
+    cout << first_name << " is in First Place!" << endl;
+    cout << second_name << " is in Second Place!" << endl;
+    cout << third_name << " is in Third Place!" << endl;
+       
       
   cout << endl;      
   cout << "The average number of rocks collected is: " << average << endl;
@@ -158,7 +150,6 @@ int main() {
 
   return 0;
 }
-
 
 // ------------- DESIGN -------------
 /* 
