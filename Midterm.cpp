@@ -133,14 +133,21 @@ int main() {
        }
    
    // Determine places + check for ties
+   // Three way tie
    if (a == b && a == c) {
-       
-       }
-  
+       cout << "It's a three way tie!" << endl;
+    }
+   // tied for first    
+   if (a == highestNum && b == highestNum) {
+    cout << p1_name << " and " << p2_name << " are tied for first place." << endl;
+    cout << second_name << " is in Second Place!" << endl;
+   } 
+
+    
     cout << first_name << " is in First Place!" << endl;
     cout << second_name << " is in Second Place!" << endl;
     cout << third_name << " is in Third Place!" << endl;
-       
+     
       
   cout << endl;      
   cout << "The average number of rocks collected is: " << average << endl;
@@ -150,7 +157,6 @@ int main() {
 
   return 0;
 }
-
 // ------------- DESIGN -------------
 /* 
 Program Name: The Rock Collecting Championships
