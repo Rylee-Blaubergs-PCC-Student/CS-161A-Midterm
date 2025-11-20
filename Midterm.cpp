@@ -196,15 +196,50 @@ Program Description:
 
 Design:
 A. INPUT
-
+player names as string
+number of rocks collected as a int
 
 B. OUTPUT
-
+placements of players based on the amount of rocks they have
+the average amount of rocks collected
 
 C. CALCULATIONS
+calculate the average
 
 
 D. LOGIC and ALGORITHMS
+DECLARE NUM PLAYERS as a constant int
+DECLARE player names 1-3 as a string
+DECLARE player count  1-3 as a int
+DISPLAY welcome message
+PROMPT user for player 1's name
+PROMPT user for player 1's rock count
+CHECK if amount of rocks entered is a valid number. greater than 0
+PROMPT user for player 2's name
+PROMPT user for player 2's rock count
+CHECK if amount of rocks entered is a valid number. greater than 0
+PROMPT user for player 3's name
+PROMPT user for player 3's rock count
+CHECK if amount of rocks entered is a valid number. greater than 0
+CALCULATE average by doing (static_cast<double>(p1_count) + p2_count + p3_count) / NUM_PLAYERS;
+SET formatting numbers to the second decimal place
+DECLARE letters a-c as player count
+DECLARE highestNum to look for the highest number of rocks
+DECLARE placement strings for first-third place
+CHECK for first place by using (a > highestNum), (b > highestNum), and (c > highestNum)
+DECLARE lowestNum and SET it to highestNum
+CHECK for third place by using (a < lowestNum), (b < lowestNum), and (c < lowestNum)
+CHECK for second place by using (lowestNum < a < highestNum), (lowestNum < b < highestNum), and (lowestNum < c < highestNum)
+IF it's a three way tie (a == b && a == c):
+  DISPLAY it's a three way tie
+IF it's tied for first
+  DISPLAY whichever two tied for first
+ELSE IF it's tied for second
+  DISPLAY whichever two tied for second
+ELSE no ties
+  DISPLAY all placements in order
+DISPLAY the average number of rocks collected
+DISPLAY goodbye message
 
 
 SAMPLE RUNS:
