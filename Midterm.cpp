@@ -59,6 +59,10 @@ int main() {
   cout << "How many rocks did " << p1_name << " collect? ";
   cin >> p1_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  if (p1_count < 0) {
+      p1_count = 0;
+      cout << "Invalid amount. 0 will be entered." << endl; 
+      }
   cout << endl;
   
 
@@ -67,6 +71,10 @@ int main() {
   cout << "How many rocks did " << p2_name << " collect? ";
   cin >> p2_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  if (p2_count < 0) {
+      p2_count = 0;
+      cout << "Invalid amount. 0 will be entered." << endl; 
+      }
   cout << endl;
   
   cout << "Enter player 3 name: ";
@@ -74,6 +82,10 @@ int main() {
   cout << "How many rocks did " << p3_name << " collect? ";
   cin >> p3_count;
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  if (p3_count < 0) {
+      p3_count = 0;
+      cout << "Invalid amount. 0 will be entered." << endl; 
+      }
   cout << endl;
   
   //Calculations
@@ -137,7 +149,7 @@ int main() {
    if (a == b && a == c) {
        cout << "It's a three way tie!" << endl;
     }
-   // tied for first    
+   // tied for first or second   
    if (a == highestNum && b == highestNum) {
      cout << p1_name << " and " << p2_name << " are tied for first place." << endl;
      cout << second_name << " is in Second Place!" << endl;
@@ -149,6 +161,18 @@ int main() {
    } else if (b == highestNum && c == highestNum) {
      cout << p2_name << " and " << p3_name << " are tied for first place." << endl;
      cout << second_name << " is in Second Place!" << endl;
+     
+   } else if (a == lowestNum && b == lowestNum) {
+     cout << first_name << " is in First Place!" << endl;
+     cout << p2_name << " and " << p3_name << " are tied for second place." << endl;
+     
+   } else if (a == lowestNum && c == lowestNum) {
+     cout << first_name << " is in First Place!" << endl;
+     cout << p2_name << " and " << p3_name << " are tied for second place." << endl;
+     
+   } else if (b == lowestNum && c == lowestNum) {
+     cout << first_name << " is in First Place!" << endl;
+     cout << p2_name << " and " << p3_name << " are tied for second place." << endl;
      
    } else {
      cout << first_name << " is in First Place!" << endl;
